@@ -59,16 +59,16 @@ body {
     color: white;
 }
 
-.cat-items-wrapper {
+.wolf-items-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.cat-item-wrapper {
+.wolf-item-wrapper {
     position: relative;
 }
 
-.cat-img-background {
+.wolf-img-background {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

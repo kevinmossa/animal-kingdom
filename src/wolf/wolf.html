@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>wolves</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="wolf.css" />
+</head>
+
+<body style="background-image: url(/src/images/snowyforest.jpg);">
+    <div class=" container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="/src/index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="/src/about.html">About</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="/src/contact.html">contact</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    ANIMAL KINGDOM
+                </div>
+            </div>
+        </div>
+
+        <!--*Content Wrapper-->
+        <div class="content-wrapper">
+            <div class="wolf-items-wrapper">
+                <div class="wolf-item-wrapper">
+                    <div class="wolf-img-background" style="background-image:url(/src/images/arctic-wolf.jpg);"></div>
+                    <div class=" img-text-wrapper">
+                        <div class="subtitle">
+                            <h1>About</h1>
+                            <ul>
+                                <p>The Arctic wolf, also known as the white wolf or polar wolf, is a subspecies of grey
+                                    wolf native to Canada's Queen Elizabeth Islands, from Melville Island to Ellesmere
+                                    Island.</p>
+                                <h2>Did you know?</h2>
+                                <p>Due to the Arctics permafrost soil and the difficulty it poses for digging dens,
+                                    Arctic Wolves often use rock outcroppings, caves or even shallow depressions as dens
+                                    instead.</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wolf-item-wrapper">
+                    <div class="wolf-img-background" style="background-image:url(/src/images/grey-wolf.jpg);"></div>
+                    <div class=" img-text-wrapper">
+                        <div class="subtitle">
+                            <h1>About</h1>
+                            <ul>
+                                <p>The wolf, also known as the gray/grey wolf, is a canine native to the wilderness and
+                                    remote areas of Eurasia and North America. It is the largest extant member of its
+                                    family, with males averaging 40 kg and females 35.5–37.7 kg. </p>
+                                <h2>Did you know?</h2>
+                                <p>The wolf officially went extinct in 1876.</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="wolf-item-wrapper">
+                    <div class="wolf-img-background" style="background-image:url(/src/images/coyote.jpg);"></div>
+                    <div class=" img-text-wrapper">
+                        <div class="subtitle">
+                            <h1>About</h1>
+                            <ul>
+                                <p>Coywolf is an informal term for a canid hybrid descended from coyotes, eastern wolves
+                                    and gray wolves. All members of the genus Canis are genetically closely related
+                                    because their chromosomes number 78, therefore they can interbreed.</p>
+                                <h2>Did you know?</h2>
+                                <p>Unlike wolves, which are carnivores and only eat meat, coywolves are omniovores
+                                    because their diet includes meat and fruit.</p>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const wolfItems = document.querySelectorAll('.wolf-item-wrapper');
+    wolfItems.forEach(wolfItem => {
+        wolfItem.addEventListener('mouseover', () => {
+            console.log(wolfItem.childNodes[1].classList)
+            wolfItem.childNodes[1].classList.add('image-blur');
+        });
+        wolfItem.addEventListener('mouseout', () => {
+            console.log(wolfItem.childNodes[1].classList)
+            wolfItem.childNodes[1].classList.remove('image-blur');
+        });
+    });
+</script>
+
+</html>
