@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cats</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="cat.css" />
+</head>
+
+<body style="background-image: url(/src/images/background.jpg);">
+    <div class=" container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="/src/index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="/src/about.html">About</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="/src/contact.html">contact</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    ANIMAL KINGDOM
+                </div>
+            </div>
+        </div>
+
+        <!--*Content Wrapper-->
+        <div class="content-wrapper">
+            <div class="cat-items-wrapper">
+                <div class="cat-item-wrapper">
+                    <div class="cat-img-background" style="background-image:url(/src/images/cat.jpg);"></div>
+                    <div class=" img-text-wrapper">
+                        <div class="subtitle">
+                            <h1>Fun Facts</h1>
+                            <ul>
+                                <li>Living in the grasslands, scrub, and open woodlands of sub-Saharan Africa, the lion
+                                    is the second largest cat in the world (behind tigers).</li>
+                                <li>African lions are the most social of all big cats and live together in groups or
+                                    “prides.”</li>
+                                <li>Lions live for about 10-14 years in the wild.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-item-wrapper">
+                    <div class="cat-img-background" style="background-image:url(/src/images/tiger.jpg);"></div>
+                    <div class=" img-text-wrapper">
+                        <div class="subtitle">
+                            <h1>Fun Facts</h1>
+                            <ul>
+                                <li>Tigers are the largest cat species in the world reaching up to 3.3 meters in length
+                                    and weighing up to 670 pounds!</li>
+                                <li>Tigers are easily recognizable with their dark vertical stripes and reddish/orange
+                                    fur.</li>
+                                <li>The Bengal tiger is the most common tiger.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-item-wrapper">
+                    <div class="cat-img-background" style="background-image:url(/src/images/cheetah.jpg);"></div>
+                    <div class=" img-text-wrapper">
+                        <div class="subtitle">
+                            <h1>Fun Facts</h1>
+                            <ul>
+                                <li>The cheetah is the fastest land animal in the world, reaching speeds of up to 70
+                                    miles per hour.</li>
+                                <li>They can accelerate from 0 to 68 miles per hour in just three seconds.</li>
+                                <li>Cheetahs are the only big cat that can turn in mid-air while sprinting.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    const catItems = document.querySelectorAll('.cat-item-wrapper');
+    catItems.forEach(catItem => {
+        catItem.addEventListener('mouseover', () => {
+            console.log(catItem.childNodes[1].classList)
+            catItem.childNodes[1].classList.add('image-blur');
+        });
+        catItem.addEventListener('mouseout', () => {
+            console.log(catItem.childNodes[1].classList)
+            catItem.childNodes[1].classList.remove('image-blur');
+        });
+    });
+</script>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Animal Kingdom</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="contact.html">contact</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    ANIMAL KINGDOM
+                </div>
+            </div>
+        </div>
+
+        <div class="content-wrapper">
+            <div class="animal-items-wrapper">
+                <div class="animal-item-wrapper">
+                    <div class="animal-img-background" style="background-image:url(images/bear.jpg)"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="bear/bear.html"><img src="images/logos/bear.png" alt="bearLogo"></a>
+                        </div>
+
+                        <div class="subtitle">Bears have excellent senses of smell, sight and hearing. They can smell
+                            food, cubs, a mate or predators from miles away. Their great eyesight allows them to detect
+                            when fruits are ripe. Some species of Asiatic bear build nests in the trees.</div>
+                    </div>
+                </div>
+                <div class="animal-item-wrapper">
+                    <div class="animal-img-background" style="background-image: url(images/cat.jpg);"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <a href="/src/cat/cat.html"><img src="images/logos/cat.png" alt="catLogo"></a>
+                        </div>
+
+                        <div class="subtitle">While humans have six muscles in both of their outer ears, cats have 32
+                            muscles in each of theirs! These muscles give cats the ability to swivel and rotate their
+                            ears to pinpoint the exact source of a noise.</div>
+                    </div>
+                </div>
+
+                <div class="animal-item-wrapper">
+                    <div class="animal-img-background" style="background-image: url(images/wolf.jpg);"></div>
+                    <div class="img-text-wrapper">
+                        <div class="logo-wrapper">
+                            <img src="images/logos/wolf.png" alt="wolfLogo">
+                        </div>
+
+                        <div class="subtitle">Wolves prefer to eat large animals like deer, elk, and moose. One wolf can
+                            eat 20 pounds (9 kilograms) of meat at a single sitting.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+<script>
+    const animalItems = document.querySelectorAll('.animal-item-wrapper');
+    animalItems.forEach(animalItem => {
+        animalItem.addEventListener('mouseover', () => {
+            console.log(animalItem.childNodes[1].classList)
+            animalItem.childNodes[1].classList.add('image-blur');
+        });
+        animalItem.addEventListener('mouseout', () => {
+            console.log(animalItem.childNodes[1].classList)
+            animalItem.childNodes[1].classList.remove('image-blur');
+        });
+    });
+</script>
+
+</html>
